@@ -33,7 +33,7 @@
                             <table cellspacing="10" style="width: 200px;">
                                 <form method="post"
                                       action="RegisterResult.php"
-                                      onsubmit="return validateRegistrationForm();"
+                                      onsubmit="return validateRegistrationForm('lbl_password');"
                                       enctype="application/x-www-form-urlencoded">
                                     <tr>
                                         <td colspan="2" class="center-label-td">Hospital Appointment System</td>
@@ -77,7 +77,7 @@
                                                    placeholder="Age" min="0" max="255" />
                                         </td>
                                         <td style="width: 50%;">
-                                            <select class="combobox"
+                                            <select class="combobox borderless"
                                                     name="cmb_gender"
                                                     placeholder="Gender">
                                                 <option value="Female">Female</option>

@@ -55,7 +55,7 @@ $database = "hospital";
                               enctype="application/x-www-form-urlencoded">
                             <tr>
                                 <td>
-                                    <select class="combobox"
+                                    <select class="combobox borderless"
                                             name="cmb_branches" id="cmb_branches"
                                             onchange="return comboboxToTextbox();">
                                         <option selected disabled>Select a branch</option>

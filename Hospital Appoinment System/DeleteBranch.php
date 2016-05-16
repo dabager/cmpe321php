@@ -51,12 +51,14 @@ $database = "hospital";
                                 </tr>
                                 <form method="post"
                                       action="DeleteBranchControl.php"
+                                      onsubmit="return validateCombobox('cmb_branches', 'Please select branch!');"
                                       enctype="application/x-www-form-urlencoded">
                                     <tr>
                                         <td>
-                                            <select class="combobox"
+                                            <select class="combobox borderless"
+                                                    onchange="return validateCombobox(this.id, 'Please select branch!');"
                                                     name="cmb_branches" id="cmb_branches">
-                                                <option selected disabled>Select a branch</option>
+                                                <option selected disabled value="-1">Select a branch</option>
                                             <?php
 
                                             $conn = new mysqli($serverName, $username, $password, $database);
@@ -102,7 +104,7 @@ $database = "hospital";
                     -->
                     <td style="width: 300px; background: #484848">
         
-                        <table cellspacing="10" style="width: 100%; margin-top: 40px; background: #484848;">
+                        <table cellspacing="10" style="width: 100%; background: #484848;">
                             <tr>
                                 <td class="comment">
                                     <label id="lbl_branches"></label>

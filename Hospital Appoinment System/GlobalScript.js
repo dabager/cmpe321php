@@ -68,7 +68,7 @@ function validateData(id)
     return isvalid;
 }
 
-function validateRegistrationForm()
+function validateRegistrationForm(id)
 {
     var ageControl = document.getElementById("txt_age");
     var isvalid = true;
@@ -80,7 +80,7 @@ function validateRegistrationForm()
     
     if(ageControl.value == "")
     {
-        document.getElementById("lbl_password").innerHTML += "Please enter age!";
+        document.getElementById(id).innerHTML += "Please enter age!";
         ageControl.className = ageControl.className.replace(" borderless", " error");
         isvalid = false;
     }
@@ -120,4 +120,50 @@ function comboboxToTextbox()
     var textbox = document.getElementById("txt_editBranchname");
     
     textbox.value = combobox.options[combobox.selectedIndex].text;
+}
+
+function validateCombobox(id,text)
+{
+    var isvalid = true;
+    var combobox = document.getElementById(id);
+    var label = document.getElementById(id.replace("cmb","lbl"));
+    label.innerHTML = label.innerHTML.replace(text,"");
+    if(combobox.value == -1)
+    {
+        isvalid = false;
+        label.innerHTML += text;
+        combobox.className = combobox.className.replace(" borderless", " error");
+    }
+    else
+    {
+        isvalid = true;
+        combobox.className = combobox.className.replace(" error", " borderless");
+    }
+    return isvalid;
+}
+
+function validateAddDoctorForm()
+{
+    var ageControl = document.getElementById("txt_age");
+    var isvalid = true;
+
+    if(!validateCombobox("cmb_branches","Please select branch!")) isvalid = false;
+    if(!validateData("txt_name")) isvalid = false;
+    if(!validateData("txt_surname")) isvalid = false;
+
+    if(ageControl.value == "")
+    {
+        var label = document.getElementById("lbl_branches");
+        label.innerHTML = label.innerHTML.replace("Please enter age!","");
+        label.innerHTML += " Please enter age!";
+        ageControl.className = ageControl.className.replace(" borderless", " error");
+        isvalid = false;
+    }
+    else
+    {
+        ageControl.className = ageControl.className.replace(" error", " borderless");
+    }
+
+    if(isvalid) return true;
+    else return false;
 }
