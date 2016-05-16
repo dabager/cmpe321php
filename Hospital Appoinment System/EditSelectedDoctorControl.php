@@ -13,7 +13,6 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] === true))
     exit();
 }
 
-
 $serverName = "localhost";
 $username = "root";
 $password = "Sf86ucj7CZ";
@@ -28,7 +27,7 @@ $conn = new mysqli($serverName, $username, $password, $database);
 if ($conn->connect_error)
 {
     $message = "Connection failed: " . $conn->connect_error;
-    $redirectURL = "AddDoctor.php";
+    $redirectURL = "EditDoctor.php";
 }
 else
 {
@@ -38,49 +37,28 @@ else
     $doctorAge = @$_POST['txt_age'];
     $doctorGender = @$_POST['cmb_gender'];
 
-    $query = "SELECT COUNT(*) AS count FROM TBL_DOCTORS WHERE isdeleted = 0 AND
-                name = '" . $doctorName . "' AND
-                surname = '" . $doctorSurname . "' AND
-                branch = '" . $doctorBranch . "' AND
-                age = " . $doctorAge . " AND
-                gender = '" . $doctorGender . "'";
 
-    print_r($query);
-    $result = $conn->query($query);
-    if ($result->num_rows > 0)
+    $query = "UPDATE TBL_DOCTORS SET name = '" . $doctorName . "' , 
+                                    surname = '" . $doctorSurname . "' , 
+                                    branch = " . $doctorBranch . ", 
+                                    age = " . $doctorAge . ", 
+                                    gender = '" . $doctorGender . "'
+                                    WHERE id = " . $_SESSION['editedDoctorID'];
+
+    if ($conn->query($query) === TRUE)
     {
-        $row = $result->fetch_assoc();
-        $count = $row["count"];
-
-        if($count === "0")
-        {
-            $query = "INSERT INTO TBL_DOCTORS (name,surname,branch,age,gender) VALUES ( '" . $doctorName . "', '" . $doctorSurname . "', '" . $doctorBranch . "', " . $doctorAge . ", '" . $doctorGender . "')";
-
-            if ($conn->query($query) === TRUE)
-            {
-                $message = "Doctor created successfully.";
-                $redirectURL = "AdminHomePage.php";
-            }
-            else
-            {
-                $message =  "Record cannot created! Error : " . $conn->error;
-                $redirectURL = "AddDoctor.php";
-            }
-        }
-        else
-        {
-            $message = "Doctor already exists! Try again.";
-            $redirectURL = "AddDoctor.php";
-        }
+        $message = "Doctor updated successfully.";
+        $redirectURL = "AdminHomePage.php";
     }
     else
     {
-        $message =  "Error : " . $conn->error;
-        $redirectURL = "AddDoctor.php";
+        $message =  "Update failed! Error : " . $conn->error;
+        $redirectURL = "EditDoctor.php";
     }
 
     $_SESSION["message"] = $message;
     $_SESSION["redirectURL"] = $redirectURL;
+    $_SESSION['editedDoctorID'] = null;
 }
 $conn->close();
 ?>
@@ -88,7 +66,7 @@ $conn->close();
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Add Branch Result Page</title>
+    <title>Edit Doctor Result Page</title>
     <link rel="stylesheet" type="text/css" href="GlobalStyle.css">
 </head>
 <body>

@@ -27,7 +27,7 @@ $conn = new mysqli($serverName, $username, $password, $database);
 if ($conn->connect_error)
 {
     $message = "Connection failed: " . $conn->connect_error;
-    $redirectURL = "AddBranch.php";
+    $redirectURL = "EditBranch.php";
 }
 else
 {
