@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="XAMPP SERVER">
+    <serverData>
+      <paths name="XAMPP SERVER">
+        <serverdata>
+          <mappings>
+            <mapping deploy="CMPE321" local="$PROJECT_DIR$" web="/cmpe321/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

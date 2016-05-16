@@ -1,0 +1,147 @@
+/**
+ * @author : Umut M. Dabager <dabager@outlook.com>
+ * Hospital Appointment System - GlobalStyle.css
+ * Written for the Cmpe 321 Assignment 3
+ */
+
+html
+{
+    background: #484848;
+    color: white;
+}
+
+form
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+table
+{
+    background: #333333;
+}
+
+label
+{
+    color: #ffffff;
+    font-family: ‘Trebuchet MS’, Century Gothic, sans-serif;
+    font-size: 12px;
+}
+
+td.comment
+{
+    width: 100%;
+    height: 30px;
+}
+
+.error
+ {
+     border:2px solid red;
+ }
+
+.center-div
+{
+    display:flex;
+    /* Vertical align: */
+    align-items: center;
+    /* Horizontal align: */
+    justify-content: center;
+    width:100%;
+    height:100%;
+    margin:auto;
+    position:absolute;
+    top:0; left:0; bottom:0; right:0;
+}
+
+.btn
+{
+    background: #52d273;
+    background-image: -webkit-linear-gradient(top, #52d273, #318246);
+    background-image: -moz-linear-gradient(top, #52d273, #318246);
+    background-image: -ms-linear-gradient(top, #52d273, #318246);
+    background-image: -o-linear-gradient(top, #52d273, #318246);
+    background-image: linear-gradient(to bottom, #52d273, #318246);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: ‘Trebuchet MS’, Century Gothic, sans-serif;
+    font-size: 16px;
+    horiz-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 100%;
+    height: 30px;
+}
+
+.btn:hover
+{
+    background: #318246;
+    background-image: -webkit-linear-gradient(top, #318246, #318246);
+    background-image: -moz-linear-gradient(top, #318246, #318246);
+    background-image: -ms-linear-gradient(top, #318246, #318246);
+    background-image: -o-linear-gradient(top, #318246, #318246);
+    background-image: linear-gradient(to bottom, #318246, #318246);
+    text-decoration: none;
+}
+
+.borderless
+{
+    border: 0px;
+}
+
+.textbox
+{
+    background: #3D3D3D;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family:  ‘Trebuchet MS’, Century Gothic, sans-serif;
+    font-size: 12px;
+    horiz-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 100%; height: 30px; padding-left: 10px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+.combobox
+{
+    background: #3D3D3D;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family:  ‘Trebuchet MS’, Century Gothic, sans-serif;
+    font-size: 12px;
+    horiz-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 100%; height: 30px;
+}
+
+.label
+{
+    font-weight: bold;
+    color: #ffffff;
+    font-family: ‘Trebuchet MS’, Century Gothic, sans-serif;
+    font-size: 16px;
+}
+
+.center-label-td
+{
+    font-weight: bold;
+    color: #ffffff;
+    font-family: ‘Trebuchet MS’, Century Gothic, sans-serif;
+    font-size: 16px;
+    text-align:center;
+    vertical-align:middle;
+}
