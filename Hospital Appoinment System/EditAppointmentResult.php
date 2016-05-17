@@ -27,7 +27,7 @@ $conn = new mysqli($serverName, $username, $password, $database);
 if ($conn->connect_error)
 {
     $message = "Connection failed: " . $conn->connect_error;
-    $redirectURL = "MakeAppointment.php";
+    $redirectURL = "EditAppointment.php";
 }
 else
 {
@@ -45,28 +45,28 @@ else
 
         if($count === "0")
         {
-            $query = "INSERT INTO TBL_APPOINTMENTS (doctor,date,patient) VALUES ( " . $doctorID . ", '" . $date . "', " . $_SESSION["id"] . ")";
+            $query = "UPDATE TBL_APPOINTMENTS SET doctor =  " . $doctorID . ", date = '" . $date . "' WHERE id = " . $_SESSION["selectedAppointmentID"];
 
             if ($conn->query($query) === TRUE)
             {
-                $message = "Appointment created successfully.";
+                $message = "Appointment updated successfully.";
                 $redirectURL = "PatientHomePage.php";
             }
             else
             {
-                $message =  "Appointment cannot created! Error : " . $conn->error;
-                $redirectURL = "MakeAppointment.php";
+                $message =  "Appointment cannot updated! Error : " . $conn->error;
+                $redirectURL = "EditAppointment.php";
             }
         }
         else
         {
             $message = "This doctor already has an appointment on this date! Try again.";
-            $redirectURL = "MakeAppointment.php";
+            $redirectURL = "EditAppointment.php";
         }
     }
     else
     {
-        $message =  "Appointment cannot created! Error : " . $conn->error;
+        $message =  "Appointment cannot updated! Error : " . $conn->error;
         $redirectURL = "PatientHomePage.php";
     }
 
@@ -79,7 +79,7 @@ $conn->close();
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Make Appointment Result Page</title>
+    <title>Edit Appointment Result Page</title>
     <link rel="stylesheet" type="text/css" href="GlobalStyle.css">
 </head>
 <body>

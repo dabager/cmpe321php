@@ -1,7 +1,7 @@
 <?php
 /**
  * @author : Umut M. Dabager <dabager@outlook.com>
- * Hospital Appointment System - Register Page
+ * Hospital Appointment System - Login Page
  * Written for the Cmpe 321 Assignment 3
  */
 
@@ -17,29 +17,22 @@ $serverName = "localhost";
 $username = "root";
 $password = "Sf86ucj7CZ";
 $database = "hospital";
-
-$branchID = @$_POST['cmb_branches'];
-$_SESSION['branchID'] = $branchID;
-
-$conn = new mysqli($serverName, $username, $password, $database);
-
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Make Appointment Page</title>
+    <title>Edit Appointment Page</title>
     <link rel="stylesheet" type="text/css" href="GlobalStyle.css" />
     <script type="text/javascript" src="GlobalScript.js"></script>
 </head>
 <body>
-<div class="center-div" style="width: 850px; height: 450px; background: #484848;">
+<div class="center-div" style="width: 850px; height: 500px; background: #484848;">
     <table width="100%" style="background: #484848;">
         <!--
         Main table for user input.
         This table has 3 columns, First one for horizontal spacing, second one for user input, third one for validation messages.
         -->
-        <tr style="height: 450px;">
+        <tr style="height: 350px;">
             <!--
             Spacing Column
             -->
@@ -48,20 +41,24 @@ $conn = new mysqli($serverName, $username, $password, $database);
             Main User Input Column
             -->
             <td>
-                <div class="center-div" style="width: 250px; background: #333333;">
+                <div class="center-div" style="width: 250px; height: 500px; background: #333333;">
                     <table cellspacing="10" style="width: 200px;">
+                        <tr>
+                            <td class="center-label-td">Hospital Appointment System</td>
+                        </tr>
+                        <tr>
+                            <td class="center-label-td" style="font-weight: normal; font-size: 12px;">Welcome <?php echo $_SESSION["name"] . " " . $_SESSION["surname"] ?></td>
+                        </tr>
                         <form method="post"
-                              action="MakeAppointmentResult.php"
-                              onsubmit="return validateMakeAppointmentForm();"
+                              action="EditAppointmentBranch.php"
+                              onsubmit="return validateCombobox('cmb_appointments', 'Please select an appointment!');"
                               enctype="application/x-www-form-urlencoded">
-                            <tr>
-                                <td class="center-label-td">Hospital Appointment System</td>
-                            </tr>
                             <tr>
                                 <td>
                                     <select class="combobox borderless"
-                                            name="cmb_doctors" id="cmb_doctors">
-                                        <option selected disabled value="-1">Select a doctor</option>
+                                            onchange="return validateCombobox(this.id, 'Please select an appointment!');"
+                                            name="cmb_appointments" id="cmb_appointments">
+                                        <option selected disabled value="-1">Select an appointment</option>
                                         <?php
 
                                         $conn = new mysqli($serverName, $username, $password, $database);
@@ -72,26 +69,18 @@ $conn = new mysqli($serverName, $username, $password, $database);
                                         }
                                         else
                                         {
-                                            $query = "SELECT id, CONCAT(CONCAT(name,' '),surname) AS doctor FROM TBL_DOCTORS WHERE isdeleted = 0 AND branch = " . $_SESSION['branchID'];
+                                            $query = "CALL SP_RETRIEVE_APPOINTMENTS(" . $_SESSION['id'] . ")";
                                             $result = $conn->query($query);
                                             if ($result->num_rows > 0)
                                             {
                                                 while($row = $result->fetch_assoc())
                                                 {
-                                                    echo "<option value=\"" . $row['id'] . "\">" . $row['doctor'] . "</option>";
+                                                    echo "<option value=\"" . $row['id'] . "\">" . $row['info'] . "</option>";
                                                 }
                                             }
                                         }
                                         ?>
                                     </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="datetime-local"
-                                           class="textbox borderless"
-                                           name="dtp_appointment" id="dtp_appointment"
-                                           onchange="return datetimeControl(this.id);"/>
                                 </td>
                             </tr>
                             <tr>
@@ -102,7 +91,7 @@ $conn = new mysqli($serverName, $username, $password, $database);
                         </form>
                         <tr>
                             <td>
-                                <a href='MakeAppointment.php'>
+                                <a href='PatientHomePage.php'>
                                     <input class="btn" type="submit" value="Go Back" />
                                 </a>
                             </td>
@@ -115,15 +104,10 @@ $conn = new mysqli($serverName, $username, $password, $database);
             -->
             <td style="width: 300px; background: #484848">
 
-                <table cellspacing="10" style="width: 100%; margin-bottom:75px; background: #484848;">
+                <table cellspacing="10" style="width: 100%; background: #484848;">
                     <tr>
                         <td class="comment">
-                            <label id="lbl_doctors"></label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="comment">
-                            <label id="lbl_appointment"></label>
+                            <label id="lbl_branches"></label>
                         </td>
                     </tr>
                 </table>

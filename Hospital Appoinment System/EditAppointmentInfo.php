@@ -28,7 +28,7 @@ $conn = new mysqli($serverName, $username, $password, $database);
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Make Appointment Page</title>
+    <title>Edit Appointment Information Page</title>
     <link rel="stylesheet" type="text/css" href="GlobalStyle.css" />
     <script type="text/javascript" src="GlobalScript.js"></script>
 </head>
@@ -51,7 +51,7 @@ $conn = new mysqli($serverName, $username, $password, $database);
                 <div class="center-div" style="width: 250px; background: #333333;">
                     <table cellspacing="10" style="width: 200px;">
                         <form method="post"
-                              action="MakeAppointmentResult.php"
+                              action="EditAppointmentResult.php"
                               onsubmit="return validateMakeAppointmentForm();"
                               enctype="application/x-www-form-urlencoded">
                             <tr>
@@ -76,9 +76,11 @@ $conn = new mysqli($serverName, $username, $password, $database);
                                             $result = $conn->query($query);
                                             if ($result->num_rows > 0)
                                             {
-                                                while($row = $result->fetch_assoc())
+                                                while($rowDoctor = $result->fetch_assoc())
                                                 {
-                                                    echo "<option value=\"" . $row['id'] . "\">" . $row['doctor'] . "</option>";
+                                                    $selection = "";
+                                                    if($rowDoctor['id'] === $_SESSION["selectedDoctorID"]) $selection = "selected=true ";
+                                                    echo "<option ". $selection . " value=\"" . $rowDoctor['id'] . "\">" . $rowDoctor['doctor'] . "</option>";
                                                 }
                                             }
                                         }
@@ -91,6 +93,7 @@ $conn = new mysqli($serverName, $username, $password, $database);
                                     <input type="datetime-local"
                                            class="textbox borderless"
                                            name="dtp_appointment" id="dtp_appointment"
+                                           value="<?php echo date("Y-m-d\\TH:i:s", strtotime($_SESSION["selectedAppointmentDate"]));?>"
                                            onchange="return datetimeControl(this.id);"/>
                                 </td>
                             </tr>
@@ -102,7 +105,7 @@ $conn = new mysqli($serverName, $username, $password, $database);
                         </form>
                         <tr>
                             <td>
-                                <a href='MakeAppointment.php'>
+                                <a href='EditAppointment.php'>
                                     <input class="btn" type="submit" value="Go Back" />
                                 </a>
                             </td>
