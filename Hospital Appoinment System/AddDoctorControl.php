@@ -44,8 +44,7 @@ else
                 branch = '" . $doctorBranch . "' AND
                 age = " . $doctorAge . " AND
                 gender = '" . $doctorGender . "'";
-
-    print_r($query);
+    
     $result = $conn->query($query);
     if ($result->num_rows > 0)
     {

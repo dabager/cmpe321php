@@ -1,7 +1,7 @@
 <?php
 /**
  * @author : Umut M. Dabager <dabager@outlook.com>
- * Hospital Appointment System - Register Page
+ * Hospital Appointment System - Login Page
  * Written for the Cmpe 321 Assignment 3
  */
 
@@ -18,22 +18,21 @@ $username = "root";
 $password = "Sf86ucj7CZ";
 $database = "hospital";
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Edit Doctor Page</title>
+    <title>Make Appointment Page</title>
     <link rel="stylesheet" type="text/css" href="GlobalStyle.css" />
     <script type="text/javascript" src="GlobalScript.js"></script>
 </head>
 <body>
-<div class="center-div" style="width: 850px; height: 450px; background: #484848;">
+<div class="center-div" style="width: 850px; height: 500px; background: #484848;">
     <table width="100%" style="background: #484848;">
         <!--
         Main table for user input.
         This table has 3 columns, First one for horizontal spacing, second one for user input, third one for validation messages.
         -->
-        <tr style="height: 450px;">
+        <tr style="height: 350px;">
             <!--
             Spacing Column
             -->
@@ -42,20 +41,24 @@ $database = "hospital";
             Main User Input Column
             -->
             <td>
-                <div class="center-div" style="width: 250px; background: #333333;">
+                <div class="center-div" style="width: 250px; height: 500px; background: #333333;">
                     <table cellspacing="10" style="width: 200px;">
+                        <tr>
+                            <td class="center-label-td">Hospital Appointment System</td>
+                        </tr>
+                        <tr>
+                            <td class="center-label-td" style="font-weight: normal; font-size: 12px;">Welcome <?php echo $_SESSION["name"] . " " . $_SESSION["surname"] ?></td>
+                        </tr>
                         <form method="post"
-                              action="EditSelectedDoctor.php"
-                              onsubmit="return validateCombobox('cmb_doctors','Please select a doctor!');"
+                              action="MakeAppointmentControl.php"
+                              onsubmit="return validateCombobox('cmb_branches', 'Please select branch!');"
                               enctype="application/x-www-form-urlencoded">
-                            <tr>
-                                <td class="center-label-td">Hospital Appointment System</td>
-                            </tr>
                             <tr>
                                 <td>
                                     <select class="combobox borderless"
-                                            name="cmb_doctors" id="cmb_doctors">
-                                        <option selected disabled value="-1">Select a doctor to edit</option>
+                                            onchange="return validateCombobox(this.id, 'Please select branch!');"
+                                            name="cmb_branches" id="cmb_branches">
+                                        <option selected disabled value="-1">Select a branch</option>
                                         <?php
 
                                         $conn = new mysqli($serverName, $username, $password, $database);
@@ -66,13 +69,13 @@ $database = "hospital";
                                         }
                                         else
                                         {
-                                            $query = "SELECT id, CONCAT(CONCAT(name,' '),surname) AS doctor FROM TBL_DOCTORS WHERE isdeleted = 0";
+                                            $query = "SELECT id, branch FROM TBL_BRANCHES WHERE isdeleted = 0";
                                             $result = $conn->query($query);
                                             if ($result->num_rows > 0)
                                             {
                                                 while($row = $result->fetch_assoc())
                                                 {
-                                                    echo "<option value=\"" . $row['id'] . "\">" . $row['doctor'] . "</option>";
+                                                    echo "<option value=\"" . $row['id'] . "\">" . $row['branch'] . "</option>";
                                                 }
                                             }
                                         }
@@ -82,17 +85,15 @@ $database = "hospital";
                             </tr>
                             <tr>
                                 <td>
-                                    <input class="btn" type="submit"
-                                           name="btn_editDoctor"
-                                           value="Edit Doctor"/>
+                                    <input class="btn" type="submit" value="Next page" />
                                 </td>
                             </tr>
                         </form>
                         <tr>
                             <td>
-                                <form action="AdminHomePage.php" method="post">
-                                    <input class="btn" type="submit" value="Go Back"/>
-                                </form>
+                                <a href='PatientHomePage.php'>
+                                    <input class="btn" type="submit" value="Go Back" />
+                                </a>
                             </td>
                         </tr>
                     </table>
@@ -103,10 +104,10 @@ $database = "hospital";
             -->
             <td style="width: 300px; background: #484848">
 
-                <table cellspacing="10" style="width: 100%; margin-bottom: 35px; background: #484848;">
+                <table cellspacing="10" style="width: 100%; background: #484848;">
                     <tr>
                         <td class="comment">
-                            <label id="lbl_doctors"></label>
+                            <label id="lbl_branches"></label>
                         </td>
                     </tr>
                 </table>

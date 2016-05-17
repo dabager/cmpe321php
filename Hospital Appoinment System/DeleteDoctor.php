@@ -22,7 +22,7 @@ $database = "hospital";
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Edit Doctor Page</title>
+    <title>Delete Doctor Page</title>
     <link rel="stylesheet" type="text/css" href="GlobalStyle.css" />
     <script type="text/javascript" src="GlobalScript.js"></script>
 </head>
@@ -45,17 +45,17 @@ $database = "hospital";
                 <div class="center-div" style="width: 250px; background: #333333;">
                     <table cellspacing="10" style="width: 200px;">
                         <form method="post"
-                              action="EditSelectedDoctor.php"
+                              action="DeleteDoctorControl.php"
                               onsubmit="return validateCombobox('cmb_doctors','Please select a doctor!');"
                               enctype="application/x-www-form-urlencoded">
                             <tr>
-                                <td class="center-label-td">Hospital Appointment System</td>
+                                <td colspan="2" class="center-label-td">Hospital Appointment System</td>
                             </tr>
                             <tr>
-                                <td>
+                                <td colspan="2">
                                     <select class="combobox borderless"
                                             name="cmb_doctors" id="cmb_doctors">
-                                        <option selected disabled value="-1">Select a doctor to edit</option>
+                                        <option selected disabled value="-1">Select a doctor to delete</option>
                                         <?php
 
                                         $conn = new mysqli($serverName, $username, $password, $database);
@@ -81,15 +81,15 @@ $database = "hospital";
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td colspan="2">
                                     <input class="btn" type="submit"
-                                           name="btn_editDoctor"
-                                           value="Edit Doctor"/>
+                                           name="btn_deleteDoctor"
+                                           value="Delete Doctor"/>
                                 </td>
                             </tr>
                         </form>
                         <tr>
-                            <td>
+                            <td colspan="2">
                                 <form action="AdminHomePage.php" method="post">
                                     <input class="btn" type="submit" value="Go Back"/>
                                 </form>

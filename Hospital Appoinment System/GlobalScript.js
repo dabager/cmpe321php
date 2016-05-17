@@ -167,3 +167,40 @@ function validateAddDoctorForm()
     if(isvalid) return true;
     else return false;
 }
+
+function datetimeControl(id)
+{
+    var isvalid = true;
+    var control = document.getElementById(id);
+    var label = document.getElementById(id.replace("dtp","lbl"));
+
+    if(new Date(Date.parse(control.value)).getMinutes() % 5 != 0)
+    {
+        control.className = control.className.replace(" borderless", " error");
+        var message = "You can select 5 minute intervals only!";
+        label.innerHTML = label.innerHTML.replace(message,"");
+        label.innerHTML += message;
+        isvalid = false
+    }
+    else
+    {
+        control.className = control.className.replace(" error", " borderless");
+        isvalid = true;
+    }
+
+    if(isvalid) return true;
+    else return false;
+}
+
+
+
+function validateMakeAppointmentForm()
+{
+    var isvalid = true;
+
+    if(!validateCombobox("cmb_doctors","Please select a doctor!")) isvalid = false;
+    if(!datetimeControl("dtp_appointment")) isvalid = false;
+    
+    if(isvalid) return true;
+    else return false;
+}

@@ -27,31 +27,47 @@ $conn = new mysqli($serverName, $username, $password, $database);
 if ($conn->connect_error)
 {
     $message = "Connection failed: " . $conn->connect_error;
-    $redirectURL = "DeleteBranch.php";
+    $redirectURL = "DeleteDoctor.php";
 }
 else
 {
-    $branchValue = @$_POST['cmb_branches'];
-    
-    if($branchValue === NULL)
-    {
-        $message =  "Please choose a branch to delete!";
-        $redirectURL = "DeleteBranch.php";
-    }
-    else
-    {
-        $query = "UPDATE TBL_BRANCHES SET isdeleted = 1 WHERE id = " . $branchValue;
+    $doctorID = @$_POST['cmb_doctors'];
+    $date = @$_POST['dtp_appointment'];
 
-        if ($conn->query($query) === TRUE)
+
+    $query = "SELECT COUNT(*) AS count FROM TBL_APPOINTMENTS WHERE iscancelled = 0 AND isdeleted = 0 AND doctor = " . $doctorID . " AND date = '" . $date . "'";
+
+    $result = $conn->query($query);
+    if ($result->num_rows > 0)
+    {
+        $row = $result->fetch_assoc();
+        $count = $row["count"];
+
+        if($count === "0")
         {
-            $message = "Branch deleted successfully.";
-            $redirectURL = "AdminHomePage.php";
+            $query = "INSERT INTO TBL_APPOINTMENTS (doctor,date,patient) VALUES ( " . $doctorID . ", '" . $date . "', " . $_SESSION["id"] . ")";
+
+            if ($conn->query($query) === TRUE)
+            {
+                $message = "Appointment created successfully.";
+                $redirectURL = "PatientHomePage.php";
+            }
+            else
+            {
+                $message =  "Appointment cannot created! Error : " . $conn->error;
+                $redirectURL = "MakeAppointment.php";
+            }
         }
         else
         {
-            $message =  "Delete failed! Error : " . $conn->error;
-            $redirectURL = "DeleteBranch.php";
+            $message = "This doctor already has an appointment on this date! Try again.";
+            $redirectURL = "MakeAppointment.php";
         }
+    }
+    else
+    {
+        $message =  "Appointment cannot created! Error : " . $conn->error;
+        $redirectURL = "PatientHomePage.php";
     }
 
     $_SESSION["message"] = $message;
@@ -63,7 +79,7 @@ $conn->close();
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Delete Branch Result Page</title>
+    <title>Make Appointment Result Page</title>
     <link rel="stylesheet" type="text/css" href="GlobalStyle.css">
 </head>
 <body>

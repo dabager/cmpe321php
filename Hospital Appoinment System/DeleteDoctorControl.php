@@ -27,31 +27,23 @@ $conn = new mysqli($serverName, $username, $password, $database);
 if ($conn->connect_error)
 {
     $message = "Connection failed: " . $conn->connect_error;
-    $redirectURL = "DeleteBranch.php";
+    $redirectURL = "DeleteDoctor.php";
 }
 else
 {
-    $branchValue = @$_POST['cmb_branches'];
-    
-    if($branchValue === NULL)
+    $doctorID = @$_POST['cmb_doctors'];
+
+    $query = "UPDATE TBL_DOCTORS SET isdeleted = 1 WHERE id = " . $doctorID;
+
+    if ($conn->query($query) === TRUE)
     {
-        $message =  "Please choose a branch to delete!";
-        $redirectURL = "DeleteBranch.php";
+        $message = "Doctor deleted successfully.";
+        $redirectURL = "AdminHomePage.php";
     }
     else
     {
-        $query = "UPDATE TBL_BRANCHES SET isdeleted = 1 WHERE id = " . $branchValue;
-
-        if ($conn->query($query) === TRUE)
-        {
-            $message = "Branch deleted successfully.";
-            $redirectURL = "AdminHomePage.php";
-        }
-        else
-        {
-            $message =  "Delete failed! Error : " . $conn->error;
-            $redirectURL = "DeleteBranch.php";
-        }
+        $message =  "Delete failed! Error : " . $conn->error;
+        $redirectURL = "DeleteDoctor.php";
     }
 
     $_SESSION["message"] = $message;
@@ -63,7 +55,7 @@ $conn->close();
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Delete Branch Result Page</title>
+    <title>Delete Doctor Result Page</title>
     <link rel="stylesheet" type="text/css" href="GlobalStyle.css">
 </head>
 <body>
