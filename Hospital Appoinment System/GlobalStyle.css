@@ -144,3 +144,10 @@ td.comment
     text-align:center;
     vertical-align:middle;
 }
+
+.td-result
+{
+    color: #ffffff;
+    font-family: ‘Trebuchet MS’, Century Gothic, sans-serif;
+    font-size: 12px;
+}

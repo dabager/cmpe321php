@@ -35,7 +35,7 @@ else
     $date = @$_POST['dtp_appointment'];
 
 
-    $query = "SELECT COUNT(*) AS count FROM TBL_APPOINTMENTS WHERE iscancelled = 0 AND isdeleted = 0 AND doctor = " . $doctorID . " AND date = '" . $date . "'";
+    $query = "SELECT COUNT(*) AS count FROM TBL_APPOINTMENTS WHERE iscancelled = 0 AND doctor = " . $doctorID . " AND date = '" . $date . "'";
 
     $result = $conn->query($query);
     if ($result->num_rows > 0)
@@ -76,6 +76,7 @@ else
 $conn->close();
 ?>
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

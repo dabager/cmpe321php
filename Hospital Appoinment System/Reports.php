@@ -17,41 +17,12 @@ $serverName = "localhost";
 $username = "root";
 $password = "Sf86ucj7CZ";
 $database = "hospital";
-
-
-
-
-$conn = new mysqli($serverName, $username, $password, $database);
-
-
-if ($conn->connect_error)
-{
-    echo "Connection failed: " . $conn->connect_error;
-}
-else
-{
-    $appointmentID = @$_POST['cmb_appointments'];
-    $_SESSION["selectedAppointmentID"] = $appointmentID;
-    $query = "SELECT D.branch,D.id,A.date FROM TBL_APPOINTMENTS AS A 
-INNER JOIN TBL_DOCTORS AS D ON A.doctor = D.id
-WHERE A.id = " . $appointmentID ;
-
-    $result = $conn->query($query);
-    if ($result->num_rows > 0)
-    {
-        $row = $result->fetch_assoc();
-        $selectedBranchID = $row["branch"];
-        $_SESSION["selectedDoctorID"] = $row["id"];
-        $_SESSION["selectedAppointmentDate"] = $row["date"];
-    }
-}
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Edit Appointment Branch Page</title>
+    <title>Reports Page</title>
     <link rel="stylesheet" type="text/css" href="GlobalStyle.css" />
     <script type="text/javascript" src="GlobalScript.js"></script>
 </head>
@@ -80,13 +51,12 @@ WHERE A.id = " . $appointmentID ;
                             <td class="center-label-td" style="font-weight: normal; font-size: 12px;">Welcome <?php echo $_SESSION["name"] . " " . $_SESSION["surname"] ?></td>
                         </tr>
                         <form method="post"
-                              action="EditAppointmentInfo.php"
-                              onsubmit="return validateCombobox('cmb_branches', 'Please select branch!');"
+                              action="ReportsView.php"
+                              onsubmit="return validateReportsForm();"
                               enctype="application/x-www-form-urlencoded">
                             <tr>
                                 <td>
                                     <select class="combobox borderless"
-                                            onchange="return validateCombobox(this.id, 'Please select branch!');"
                                             name="cmb_branches" id="cmb_branches">
                                         <option selected disabled value="-1">Select a branch</option>
                                         <?php
@@ -99,15 +69,13 @@ WHERE A.id = " . $appointmentID ;
                                         }
                                         else
                                         {
-                                            $query = "SELECT id, branch FROM TBL_BRANCHES WHERE isdeleted = 0";
+                                            $query = "CALL SP_CMB_BRANCHES";
                                             $result = $conn->query($query);
                                             if ($result->num_rows > 0)
                                             {
-                                                while($rowBranch = $result->fetch_assoc())
+                                                while($row = $result->fetch_assoc())
                                                 {
-                                                    $selection = "";
-                                                    if($rowBranch['id'] === $selectedBranchID) $selection = "selected=true ";
-                                                    echo "<option ". $selection . " value=\"" . $rowBranch['id'] . "\">" . $rowBranch['branch'] . "</option>";
+                                                    echo "<option value=\"" . $row['id'] . "\">" . $row['branch'] . "</option>";
                                                 }
                                             }
                                         }
@@ -117,13 +85,23 @@ WHERE A.id = " . $appointmentID ;
                             </tr>
                             <tr>
                                 <td>
-                                    <input class="btn" type="submit" value="Next page" />
+                                    <select class="combobox borderless"
+                                            name="cmb_reports" id="cmb_reports">
+                                        <option selected disabled value="-1">Select a report</option>
+                                        <option value="0">Past appointments</option>
+                                        <option value="1">Future appointments</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="btn" type="submit" value="View report" />
                                 </td>
                             </tr>
                         </form>
                         <tr>
                             <td>
-                                <a href='EditAppointment.php'>
+                                <a href='AdminHomePage.php'>
                                     <input class="btn" type="submit" value="Go Back" />
                                 </a>
                             </td>
@@ -136,10 +114,15 @@ WHERE A.id = " . $appointmentID ;
             -->
             <td style="width: 300px; background: #484848">
 
-                <table cellspacing="10" style="width: 100%; background: #484848;">
+                <table cellspacing="10" style="width: 100%; margin-bottom: 10px; background: #484848;">
                     <tr>
                         <td class="comment">
                             <label id="lbl_branches"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="comment">
+                            <label id="lbl_reports"></label>
                         </td>
                     </tr>
                 </table>

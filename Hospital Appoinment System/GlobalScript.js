@@ -139,7 +139,9 @@ function validateCombobox(id,text)
         isvalid = true;
         combobox.className = combobox.className.replace(" error", " borderless");
     }
-    return isvalid;
+    
+    if(isvalid) return true;
+    else return false;
 }
 
 function validateAddDoctorForm()
@@ -201,6 +203,17 @@ function validateMakeAppointmentForm()
     if(!validateCombobox("cmb_doctors","Please select a doctor!")) isvalid = false;
     if(!datetimeControl("dtp_appointment")) isvalid = false;
     
+    if(isvalid) return true;
+    else return false;
+}
+
+function validateReportsForm()
+{
+    var isvalid = true;
+
+    if(!validateCombobox("cmb_branches","Please select a branch!")) isvalid = false;
+    if(!validateCombobox("cmb_reports","Please select a report!")) isvalid = false;
+
     if(isvalid) return true;
     else return false;
 }

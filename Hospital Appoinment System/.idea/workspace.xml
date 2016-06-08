@@ -2,15 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30c496c1-3f8a-4d43-ae1b-829ee8948fc0" name="Default" comment="Initial Commit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CancelAppointment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CancelAppointmentResult.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EditAppointment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EditAppointmentBranch.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EditAppointmentInfo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EditAppointmentResult.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reports.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsView.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MakeAppointmentControl.php" afterPath="$PROJECT_DIR$/MakeAppointmentControl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AddBranch.php" afterPath="$PROJECT_DIR$/AddBranch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AddBranchControl.php" afterPath="$PROJECT_DIR$/AddBranchControl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AddDoctorControl.php" afterPath="$PROJECT_DIR$/AddDoctorControl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdminHomePage.php" afterPath="$PROJECT_DIR$/AdminHomePage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CancelAppointment.php" afterPath="$PROJECT_DIR$/CancelAppointment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CancelAppointmentResult.php" afterPath="$PROJECT_DIR$/CancelAppointmentResult.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeleteBranch.php" afterPath="$PROJECT_DIR$/DeleteBranch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeleteBranchControl.php" afterPath="$PROJECT_DIR$/DeleteBranchControl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeleteDoctorControl.php" afterPath="$PROJECT_DIR$/DeleteDoctorControl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EditAppointment.php" afterPath="$PROJECT_DIR$/EditAppointment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EditAppointmentBranch.php" afterPath="$PROJECT_DIR$/EditAppointmentBranch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EditAppointmentResult.php" afterPath="$PROJECT_DIR$/EditAppointmentResult.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EditBranch.php" afterPath="$PROJECT_DIR$/EditBranch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EditBranchControl.php" afterPath="$PROJECT_DIR$/EditBranchControl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EditSelectedDoctorControl.php" afterPath="$PROJECT_DIR$/EditSelectedDoctorControl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GlobalScript.js" afterPath="$PROJECT_DIR$/GlobalScript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GlobalStyle.css" afterPath="$PROJECT_DIR$/GlobalStyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Login.php" afterPath="$PROJECT_DIR$/Login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginControl.php" afterPath="$PROJECT_DIR$/LoginControl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MakeAppointment.php" afterPath="$PROJECT_DIR$/MakeAppointment.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MakeAppointmentResult.php" afterPath="$PROJECT_DIR$/MakeAppointmentResult.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PatientHomePage.php" afterPath="$PROJECT_DIR$/PatientHomePage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UnauthorizedAccess.php" afterPath="$PROJECT_DIR$/UnauthorizedAccess.php" />
     </list>
     <ignored path="Hospital Appoinment System.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,134 +48,23 @@
     <favorites_list name="Hospital Appoinment System" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MakeAppointment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MakeAppointment.php">
+    <leaf>
+      <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="32" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-              <folding>
-                <marker date="1463488063421" expanded="true" signature="3071:3126" placeholder="SELECT id, b... TBL_BRANCHES" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditAppointment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EditAppointment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="69" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-              <folding>
-                <marker date="1463492519387" expanded="true" signature="3104:3158" placeholder="SELECT id, b... TBL_BRANCHES" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MakeAppointmentControl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MakeAppointmentControl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="104" column="56" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="56" />
-              <folding>
-                <marker date="1463493056109" expanded="true" signature="2931:3034" placeholder="SELECT id, C... TBL_DOCTORS" />
-                <marker date="1463493056109" expanded="true" signature="2931:3035" placeholder="SELECT id, C... TBL_DOCTORS" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditAppointmentBranch.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EditAppointmentBranch.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="38" />
-              <folding>
-                <marker date="1463493349433" expanded="true" signature="682:798" placeholder="SELECT D.bra... TBL_APPOINTMENTS" />
-                <marker date="1463493349433" expanded="true" signature="3776:3831" placeholder="SELECT id, b... TBL_BRANCHES" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditAppointmentInfo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EditAppointmentInfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-              <folding>
-                <marker date="1463494126083" expanded="true" signature="2943:3047" placeholder="SELECT id, C... TBL_DOCTORS" />
-                <marker date="1463494126083" expanded="true" signature="4693:4780" placeholder="..." />
-                <marker date="1463494126083" expanded="true" signature="4730:4780" placeholder="..." />
-                <marker date="1463494126083" expanded="true" signature="4953:5099" placeholder="..." />
-                <marker date="1463494126083" expanded="true" signature="4986:5099" placeholder="..." />
-                <marker date="1463494126083" expanded="true" signature="5049:5099" placeholder="..." />
-                <marker date="1463494126083" expanded="true" signature="5326:5375" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditBranch.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EditBranch.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="42" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+              <caret line="10" column="98" selection-start-line="10" selection-start-column="98" selection-end-line="10" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditAppointmentResult.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EditAppointmentResult.php">
+      <file leaf-file-name="LoginControl.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LoginControl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
-              <folding>
-                <marker date="1463494131803" expanded="true" signature="724:868" placeholder="SELECT COUNT... " />
-                <marker date="1463494131803" expanded="true" signature="1076:1205" placeholder="UPDATE TBL_A... " />
-                <marker date="1463494131803" expanded="true" signature="1082:1205" placeholder="INSERT INTO TBL_APPOINTMENTS... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CancelAppointment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CancelAppointment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1003">
+              <caret line="66" column="98" selection-start-line="66" selection-start-column="98" selection-end-line="66" selection-end-column="98" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CancelAppointmentResult.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CancelAppointmentResult.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MakeAppointmentResult.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MakeAppointmentResult.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-              <folding>
-                <marker date="1463493145780" expanded="true" signature="724:824" placeholder="SELECT COUNT... " />
-                <marker date="1463493145780" expanded="true" signature="724:854" placeholder="SELECT COUNT... " />
-                <marker date="1463493145780" expanded="true" signature="724:855" placeholder="SELECT COUNT... " />
-                <marker date="1463493145780" expanded="true" signature="724:868" placeholder="SELECT COUNT... " />
-                <marker date="1463493145780" expanded="true" signature="724:869" placeholder="SELECT COUNT... " />
-                <marker date="1463493145780" expanded="true" signature="1076:1156" placeholder="INSERT INTO TBL_APPOINTMENTS... " />
-                <marker date="1463493145780" expanded="true" signature="1076:1172" placeholder="INSERT INTO TBL_APPOINTMENTS... " />
-                <marker date="1463493145780" expanded="true" signature="1076:1196" placeholder="INSERT INTO TBL_APPOINTMENTS... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -187,35 +93,40 @@
         <option value="$PROJECT_DIR$/create_student_result.php" />
         <option value="$PROJECT_DIR$/create.php" />
         <option value="$PROJECT_DIR$/Logout.php" />
-        <option value="$PROJECT_DIR$/LoginControl.php" />
-        <option value="$PROJECT_DIR$/UnauthorizedAccess.php" />
-        <option value="$PROJECT_DIR$/Login.php" />
         <option value="$PROJECT_DIR$/RegisterResult.php" />
-        <option value="$PROJECT_DIR$/AddBranchControl.php" />
-        <option value="$PROJECT_DIR$/AddBranch.php" />
-        <option value="$PROJECT_DIR$/AdminHomePage.php" />
-        <option value="$PROJECT_DIR$/GlobalStyle.css" />
         <option value="$PROJECT_DIR$/Register.php" />
-        <option value="$PROJECT_DIR$/EditBranch.php" />
-        <option value="$PROJECT_DIR$/DeleteBranch.php" />
         <option value="$PROJECT_DIR$/AddDoctor.php" />
-        <option value="$PROJECT_DIR$/EditBranchControl.php" />
-        <option value="$PROJECT_DIR$/EditSelectedDoctorControl.php" />
         <option value="$PROJECT_DIR$/EditSelectedDoctor.php" />
+        <option value="$PROJECT_DIR$/DeleteDoctor.php" />
+        <option value="$PROJECT_DIR$/EditDoctor.php" />
+        <option value="$PROJECT_DIR$/MakeAppointmentControl.php" />
+        <option value="$PROJECT_DIR$/EditAppointmentInfo.php" />
+        <option value="$PROJECT_DIR$/GlobalScript.js" />
+        <option value="$PROJECT_DIR$/ViewReports.php" />
+        <option value="$PROJECT_DIR$/GlobalStyle.css" />
+        <option value="$PROJECT_DIR$/AddBranch.php" />
+        <option value="$PROJECT_DIR$/AddBranchControl.php" />
+        <option value="$PROJECT_DIR$/AddDoctorControl.php" />
+        <option value="$PROJECT_DIR$/AdminHomePage.php" />
+        <option value="$PROJECT_DIR$/CancelAppointment.php" />
+        <option value="$PROJECT_DIR$/CancelAppointmentResult.php" />
+        <option value="$PROJECT_DIR$/DeleteBranch.php" />
         <option value="$PROJECT_DIR$/DeleteBranchControl.php" />
         <option value="$PROJECT_DIR$/DeleteDoctorControl.php" />
-        <option value="$PROJECT_DIR$/DeleteDoctor.php" />
-        <option value="$PROJECT_DIR$/MakeAppointment.php" />
-        <option value="$PROJECT_DIR$/PatientHomePage.php" />
-        <option value="$PROJECT_DIR$/EditDoctor.php" />
-        <option value="$PROJECT_DIR$/GlobalScript.js" />
-        <option value="$PROJECT_DIR$/AddDoctorControl.php" />
         <option value="$PROJECT_DIR$/EditAppointment.php" />
-        <option value="$PROJECT_DIR$/MakeAppointmentControl.php" />
-        <option value="$PROJECT_DIR$/MakeAppointmentResult.php" />
         <option value="$PROJECT_DIR$/EditAppointmentBranch.php" />
-        <option value="$PROJECT_DIR$/EditAppointmentInfo.php" />
         <option value="$PROJECT_DIR$/EditAppointmentResult.php" />
+        <option value="$PROJECT_DIR$/EditBranch.php" />
+        <option value="$PROJECT_DIR$/EditBranchControl.php" />
+        <option value="$PROJECT_DIR$/EditSelectedDoctorControl.php" />
+        <option value="$PROJECT_DIR$/Login.php" />
+        <option value="$PROJECT_DIR$/LoginControl.php" />
+        <option value="$PROJECT_DIR$/MakeAppointment.php" />
+        <option value="$PROJECT_DIR$/MakeAppointmentResult.php" />
+        <option value="$PROJECT_DIR$/PatientHomePage.php" />
+        <option value="$PROJECT_DIR$/Reports.php" />
+        <option value="$PROJECT_DIR$/ReportsView.php" />
+        <option value="$PROJECT_DIR$/UnauthorizedAccess.php" />
       </list>
     </option>
   </component>
@@ -260,7 +171,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -282,6 +192,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -367,6 +278,9 @@
       <workItem from="1463466152043" duration="1754000" />
       <workItem from="1463487778159" duration="3442000" />
       <workItem from="1463491318282" duration="2816000" />
+      <workItem from="1463497966565" duration="5262000" />
+      <workItem from="1463516126938" duration="960000" />
+      <workItem from="1463564771934" duration="950000" />
     </task>
     <task id="LOCAL-00001" summary="Edit">
       <created>1463432709595</created>
@@ -415,7 +329,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70517000" />
+    <option name="totallyTimeSpent" value="77689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -489,28 +403,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LoginControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GlobalStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -538,7 +430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
           <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -574,7 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
           <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -582,10 +472,180 @@
     <entry file="file://$PROJECT_DIR$/create.php" />
     <entry file="file://$PROJECT_DIR$/../php_tutorial/cmpe321/create_student_result.php" />
     <entry file="file://$PROJECT_DIR$/../php_tutorial/cmpe321/create_student.php" />
-    <entry file="file://$PROJECT_DIR$/UnauthorizedAccess.php">
+    <entry file="file://$PROJECT_DIR$/EditAppointmentControl.php" />
+    <entry file="file://$PROJECT_DIR$/ViewReports.php" />
+    <entry file="file://$PROJECT_DIR$/GlobalStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="151" column="17" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AddBranch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="98" selection-start-line="13" selection-start-column="98" selection-end-line="13" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AddBranchControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="76" column="98" selection-start-line="76" selection-start-column="98" selection-end-line="76" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AddDoctor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="20" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AddDoctorControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdminHomePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="13" column="98" selection-start-line="13" selection-start-column="98" selection-end-line="13" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CancelAppointment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CancelAppointmentResult.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <caret line="54" column="98" selection-start-line="54" selection-start-column="98" selection-end-line="54" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeleteDoctorControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="54" column="98" selection-start-line="54" selection-start-column="98" selection-end-line="54" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeleteDoctor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeleteBranch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeleteBranchControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="62" column="98" selection-start-line="62" selection-start-column="98" selection-end-line="62" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EditAppointment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EditAppointmentBranch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="49" column="98" selection-start-line="49" selection-start-column="98" selection-end-line="49" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EditAppointmentInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EditAppointmentResult.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="78" column="98" selection-start-line="78" selection-start-column="98" selection-end-line="78" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EditBranch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EditBranchControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="55" column="98" selection-start-line="55" selection-start-column="98" selection-end-line="55" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EditDoctor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EditSelectedDoctor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1644">
+          <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EditSelectedDoctorControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="65" column="98" selection-start-line="65" selection-start-column="98" selection-end-line="65" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GlobalScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2392">
+          <caret line="209" column="28" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reports.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportsView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="36" column="98" selection-start-line="36" selection-start-column="98" selection-end-line="36" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UnauthorizedAccess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" column="98" selection-start-line="7" selection-start-column="98" selection-end-line="7" selection-end-column="98" />
         </state>
       </provider>
     </entry>
@@ -596,25 +656,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RegisterResult.php">
+    <entry file="file://$PROJECT_DIR$/MakeAppointment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="102">
+          <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AddBranch.php">
+    <entry file="file://$PROJECT_DIR$/MakeAppointmentControl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="67" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
+        <state relative-caret-position="1185">
+          <caret line="77" column="45" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GlobalStyle.css">
+    <entry file="file://$PROJECT_DIR$/MakeAppointmentResult.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" column="24" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="391">
+          <caret line="78" column="98" selection-start-line="78" selection-start-column="98" selection-end-line="78" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PatientHomePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="98" selection-start-line="13" selection-start-column="98" selection-end-line="13" selection-end-column="98" />
         </state>
       </provider>
     </entry>
@@ -625,256 +691,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AddBranchControl.php">
+    <entry file="file://$PROJECT_DIR$/RegisterResult.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AddDoctor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="137" column="102" selection-start-line="137" selection-start-column="102" selection-end-line="137" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EditSelectedDoctorControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeleteBranchControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeleteDoctor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
-          <folding>
-            <marker date="1463441155887" expanded="true" signature="2847:2937" placeholder="SELECT id, C... TBL_DOCTORS" />
-          </folding>
+        <state relative-caret-position="-782">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdminHomePage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="52" column="40" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="10" column="98" selection-start-line="10" selection-start-column="98" selection-end-line="10" selection-end-column="98" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeleteBranch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="73" column="74" selection-start-line="0" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EditDoctor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
-          <folding>
-            <marker date="1463488338418" expanded="true" signature="2818:2908" placeholder="SELECT id, C... TBL_DOCTORS" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GlobalScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3281">
-          <caret line="197" column="1" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PatientHomePage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeleteDoctorControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="28" column="60" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="7" />
-          <folding>
-            <marker date="1463441108942" expanded="true" signature="680:728" placeholder="UPDATE TBL_D... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LoginControl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="31" />
+        <state relative-caret-position="1003">
+          <caret line="66" column="98" selection-start-line="66" selection-start-column="98" selection-end-line="66" selection-end-column="98" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AddDoctorControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="72" column="9" selection-start-line="46" selection-start-column="4" selection-end-line="72" selection-end-column="9" />
-          <folding>
-            <marker date="1463489360277" expanded="true" signature="847:1163" placeholder="SELECT COUNT... " />
-            <marker date="1463489360277" expanded="true" signature="1375:1559" placeholder="INSERT INTO TBL_DOCTORS... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EditAppointmentControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EditBranchControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
-          <folding>
-            <marker date="1463439311142" expanded="true" signature="731:797" placeholder="UPDATE TBL_B... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EditBranch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="42" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EditSelectedDoctor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="128" column="49" selection-start-line="128" selection-start-column="49" selection-end-line="131" selection-end-column="158" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MakeAppointmentControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="104" column="56" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="56" />
-          <folding>
-            <marker date="1463493056109" expanded="true" signature="2931:3034" placeholder="SELECT id, C... TBL_DOCTORS" />
-            <marker date="1463493056109" expanded="true" signature="2931:3035" placeholder="SELECT id, C... TBL_DOCTORS" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MakeAppointmentResult.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-          <folding>
-            <marker date="1463493145780" expanded="true" signature="724:824" placeholder="SELECT COUNT... " />
-            <marker date="1463493145780" expanded="true" signature="724:854" placeholder="SELECT COUNT... " />
-            <marker date="1463493145780" expanded="true" signature="724:855" placeholder="SELECT COUNT... " />
-            <marker date="1463493145780" expanded="true" signature="724:868" placeholder="SELECT COUNT... " />
-            <marker date="1463493145780" expanded="true" signature="724:869" placeholder="SELECT COUNT... " />
-            <marker date="1463493145780" expanded="true" signature="1076:1156" placeholder="INSERT INTO TBL_APPOINTMENTS... " />
-            <marker date="1463493145780" expanded="true" signature="1076:1172" placeholder="INSERT INTO TBL_APPOINTMENTS... " />
-            <marker date="1463493145780" expanded="true" signature="1076:1196" placeholder="INSERT INTO TBL_APPOINTMENTS... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MakeAppointment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="32" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding>
-            <marker date="1463488063421" expanded="true" signature="3071:3126" placeholder="SELECT id, b... TBL_BRANCHES" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CancelAppointment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CancelAppointmentResult.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EditAppointment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="69" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding>
-            <marker date="1463492519387" expanded="true" signature="3104:3158" placeholder="SELECT id, b... TBL_BRANCHES" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EditAppointmentBranch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="38" />
-          <folding>
-            <marker date="1463493349433" expanded="true" signature="682:798" placeholder="SELECT D.bra... TBL_APPOINTMENTS" />
-            <marker date="1463493349433" expanded="true" signature="3776:3831" placeholder="SELECT id, b... TBL_BRANCHES" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EditAppointmentInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-          <folding>
-            <marker date="1463494126083" expanded="true" signature="2943:3047" placeholder="SELECT id, C... TBL_DOCTORS" />
-            <marker date="1463494126083" expanded="true" signature="4693:4780" placeholder="..." />
-            <marker date="1463494126083" expanded="true" signature="4730:4780" placeholder="..." />
-            <marker date="1463494126083" expanded="true" signature="4953:5099" placeholder="..." />
-            <marker date="1463494126083" expanded="true" signature="4986:5099" placeholder="..." />
-            <marker date="1463494126083" expanded="true" signature="5049:5099" placeholder="..." />
-            <marker date="1463494126083" expanded="true" signature="5326:5375" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EditAppointmentResult.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
-          <folding>
-            <marker date="1463494131803" expanded="true" signature="724:868" placeholder="SELECT COUNT... " />
-            <marker date="1463494131803" expanded="true" signature="1076:1205" placeholder="UPDATE TBL_A... " />
-            <marker date="1463494131803" expanded="true" signature="1082:1205" placeholder="INSERT INTO TBL_APPOINTMENTS... " />
-          </folding>
         </state>
       </provider>
     </entry>
